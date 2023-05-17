@@ -8,8 +8,32 @@ class Home extends BaseController
     {
         return view('Home');
     }
-    public function form()
+    public function pesan()
     {
-        return view('Form');
+        return view('Pesan');
+    }
+    public function faq()
+    {
+        return view('Faq');
+    }
+    public function admin()
+    {
+        return view('admin');
+    }
+    public function adminForm()
+    {
+        return view('forms');
+    }
+    public function adminLogin()
+    {
+        return view('login');
+    }
+    public function adminProfile()
+    {
+        return view('Profile');
+    }
+    public function adminTables()
+    {
+        return view('tables');
     }
 }

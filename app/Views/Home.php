@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/app.css">
     <script defer src="js/alpine.min.js"></script>
-    <title>Document</title>
+    <title>FIX STORE</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                         <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse" class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none">
                             <ul class="blcok lg:flex">
                                 <li>
-                                    <a href="/" class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                                    <a href="/" class="flex py-2 text-base text-dark font-semibold hover:text-primary lg:ml-12 lg:inline-flex">
                                         Home
                                     </a>
                                 </li>
@@ -43,8 +43,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)" class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
-                                        Features
+                                    <a href="/faq" class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex">
+                                        FAQ
                                     </a>
                                 </li>
                             </ul>
@@ -183,7 +183,7 @@
                 <div class="-mx-4 flex flex-wrap">
                     <div class="w-full px-4 md:w-1/2 xl:w-1/3">
                         <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                            <img src="images/sedan.png" alt="image" class="w-full h-52" />
+                            <img src="images/sedan.png" alt="image" class="w-full h-56" />
                             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
                                 <h3>
                                     <a href="javascript:void(0)" class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
@@ -203,7 +203,7 @@
                     </div>
                     <div class="w-full px-4 md:w-1/2 xl:w-1/3">
                         <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                            <img src="images/suv.png" alt="image" class="w-full h-52" />
+                            <img src="images/suv.png" alt="image" class="w-full h-56" />
                             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
                                 <h3>
                                     <a href="javascript:void(0)" class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
@@ -223,7 +223,7 @@
                     </div>
                     <div class="w-full px-4 md:w-1/2 xl:w-1/3">
                         <div class="mb-10 overflow-hidden rounded-lg bg-white">
-                            <img src="images/box.png" alt="image" class="w-full h-52" />
+                            <img src="images/box.png" alt="image" class="w-full h-56" />
                             <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
                                 <h3>
                                     <a href="javascript:void(0)" class="mb-4 block text-xl font-semibold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
