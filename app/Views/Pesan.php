@@ -63,86 +63,88 @@
         </div>
     </header>
 
-    <section class="container mt-10">
-        <div class="text-center mb-10">
-            <h1 class="text-2xl font-semibold">Call a Mechanic Service</h1>
-        </div>
-        <div class="flex flex-col md:flex-row flex-wrap w-full">
-            <div class="md:w-1/2">
-                <div class="w-full px-4">
-                    <div class="mb-12">
-                        <label for="" class="mb-3 block text-base font-medium text-black">
-                            Nama
-                        </label>
-                        <input type="text" placeholder="Default Input" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]" />
-                    </div>
-                    <div>
+    <form action="/orders/store" method="POST">
+        <section class="container mt-10">
+            <div class="text-center mb-10">
+                <h1 class="text-2xl font-semibold">Call a Mechanic Service</h1>
+            </div>
+            <div class="flex flex-col md:flex-row flex-wrap w-full">
+                <div class="md:w-1/2">
+                    <div class="w-full px-4">
+                        <div class="mb-12">
+                            <label for="" class="mb-3 block text-base font-medium text-black">
+                                Nama Pelanggan
+                            </label>
+                            <input name="customer_name" type="text" placeholder="Default Input" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]" />
+                        </div>
+                        <div>
 
+                        </div>
+                    </div>
+                    <div class="w-full px-4">
+                        <div class="mb-12">
+                            <label for="" class="mb-3 block text-base font-medium text-black">
+                                Alamat
+                            </label>
+                            <textarea name="address" rows="5" placeholder="Default textarea" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]"></textarea>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full px-4">
-                    <div class="mb-12">
-                        <label for="" class="mb-3 block text-base font-medium text-black">
-                            Alamat
-                        </label>
-                        <textarea rows="5" placeholder="Default textarea" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]"></textarea>
+                <div class="md:w-1/2">
+                    <div class="w-full px-4">
+                        <div class="mb-12">
+                            <label for="" class="mb-3 block text-base font-medium text-black">
+                                Nama Mobil
+                            </label>
+                            <input name="car_name" type="text" placeholder="Default Input" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]" />
+                        </div>
+                    </div>
+                    <div class="w-full px-4">
+                        <div class="mb-12">
+                            <label for="" class="mb-3 block text-base font-medium text-black">
+                                Detail Kerusakan
+                            </label>
+                            <textarea name="damage_details" rows="5" placeholder="Default textarea" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="md:w-1/2">
-                <div class="w-full px-4">
+
+            <div class="flex flex-col md:flex-row flex-wrap w-full justify-between">
+                <div class="w-full px-4 lg:w-5/12">
+                    <div class="mb-12">
+                        <label for="" class="mb-3 block text-base font-medium text-black">
+                            Foto Kerusakan Mobil
+                        </label>
+                        <input name="car_image" type="file" class="w-full cursor-pointer rounded-lg border-[1.5px] border-form-stroke font-medium text-body-color placeholder-body-color outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-form-stroke file:bg-[#F5F7FD] file:py-3 file:px-5 file:text-body-color file:hover:bg-primary file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]" />
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-5/12">
                     <div class="mb-12">
                         <label for="" class="mb-3 block text-base font-medium text-black">
                             Type Mobil
                         </label>
-                        <input type="text" placeholder="Default Input" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]" />
-                    </div>
-                </div>
-                <div class="w-full px-4">
-                    <div class="mb-12">
-                        <label for="" class="mb-3 block text-base font-medium text-black">
-                            Detail Kerusakan
-                        </label>
-                        <textarea rows="5" placeholder="Default textarea" class="w-full rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color placeholder-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]"></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex flex-col md:flex-row flex-wrap w-full justify-between">
-            <div class="w-full px-4 lg:w-5/12">
-                <div class="mb-12">
-                    <label for="" class="mb-3 block text-base font-medium text-black">
-                        Foto Kerusakan Mobil
-                    </label>
-                    <input type="file" class="w-full cursor-pointer rounded-lg border-[1.5px] border-form-stroke font-medium text-body-color placeholder-body-color outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-form-stroke file:bg-[#F5F7FD] file:py-3 file:px-5 file:text-body-color file:hover:bg-primary file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]" />
-                </div>
-            </div>
-            <div class="w-full px-4 lg:w-5/12">
-                <div class="mb-12">
-                    <label for="" class="mb-3 block text-base font-medium text-black">
-                        Type Mobil
-                    </label>
-                    <div class="relative">
-                        <select class="w-full appearance-none rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]">
-                            <option value="">Sedan</option>
-                            <option value="">Suv</option>
-                            <option value="">Box</option>
-                        </select>
-                        <span class="absolute right-4 top-1/2 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-body-color">
-                        </span>
+                        <div class="relative">
+                            <select name="car_type" class="w-full appearance-none rounded-lg border-[1.5px] border-form-stroke py-3 px-5 font-medium text-body-color outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-[#F5F7FD]">
+                                <option value="Sedan">Sedan</option>
+                                <option value="Suv">Suv</option>
+                                <option value="Box">Box</option>
+                            </select>
+                            <span class="absolute right-4 top-1/2 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-r-2 border-b-2 border-body-color">
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <button class="w-24 float-right py-3 px-5 rounded-lg bg-slate-800 text-white font-medium text-base transition hover:bg-primary-hover active:bg-primary-active disabled:cursor-default disabled:bg-[#F5F7FD]">
-                Submit
-            </button>
-        </div>
+            <div>
+                <button class="w-24 float-right py-3 px-5 rounded-lg bg-slate-800 text-white font-medium text-base transition hover:bg-primary-hover active:bg-primary-active disabled:cursor-default disabled:bg-[#F5F7FD]" type="submit" value="Simpan">
+                    Submit
+                </button>
+            </div>
 
-    </section>
+        </section>
+    </form>
 
 
 

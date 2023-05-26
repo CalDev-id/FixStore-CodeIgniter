@@ -38,6 +38,20 @@ $routes->get('/login', 'Home::adminLogin');
 $routes->get('/profile', 'Home::adminProfile');
 $routes->get('/tables', 'Home::adminTables');
 
+$routes->get('/register', 'AuthController::register');
+$routes->post('/register', 'AuthController::processRegister');
+$routes->get('/login', 'AuthController::login');
+$routes->post('/login', 'AuthController::processLogin');
+$routes->get('/logout', 'AuthController::logout');
+
+
+$routes->get('/orders', 'Orders::index');
+$routes->get('/orders/create', 'Orders::create');
+$routes->post('/orders/store', 'Orders::store');
+$routes->get('/orders/edit/(:num)', 'Orders::edit/$1');
+$routes->post('/orders/update', 'Orders::update');
+$routes->get('/orders/delete/(:num)', 'Orders::delete/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
