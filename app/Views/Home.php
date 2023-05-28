@@ -51,7 +51,7 @@
                         </nav>
                     </div>
                     <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
-                        <a href="javascript:void(0)" class="py-3 px-7 text-base font-medium text-dark hover:text-primary">
+                        <a href="/login" class="py-3 px-7 text-base font-medium text-dark hover:text-primary">
                             Login
                         </a>
                         <a href="javascript:void(0)" class="rounded-lg bg-slate-800 py-3 px-7 text-base font-medium text-white hover:bg-opacity-90">

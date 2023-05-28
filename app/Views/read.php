@@ -1,7 +1,7 @@
 
 <h1>Daftar Pesanan</h1>
 
-<a href="/orders/create">Tambah Pesanan Baru</a>
+<a href="/pesan">Tambah Pesanan Baru</a>
 
 <table>
     <thead>

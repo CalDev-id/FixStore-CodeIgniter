@@ -43,7 +43,7 @@ class AuthController extends BaseController
     public function login()
     {
         // Tampilkan halaman login
-        return view('login');
+        return view('login3');
     }
 
     public function processLogin()
@@ -72,13 +72,12 @@ class AuthController extends BaseController
             if (password_verify($password, $user['password'])) {
                 // Set session pengguna
                 session()->set([
-                    'user_id'   => $user['id'],
                     'username'  => $user['username'],
                     'logged_in' => true,
                 ]);
 
                 // Redirect ke halaman dashboard atau halaman lain yang diinginkan
-                return redirect()->to('/admin');
+                return redirect()->to('/orders');
             }
         }
 

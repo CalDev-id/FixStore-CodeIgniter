@@ -13,7 +13,7 @@ class OrderModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['customer_name', 'car_name', 'address', 'damage_details', 'car_image', 'car_type'];
+    protected $allowedFields    = ['customer_name', 'car_name', 'address', 'damage_details', 'car_image', 'car_type', 'handleby'];
 
     // Dates
     protected $useTimestamps = false;

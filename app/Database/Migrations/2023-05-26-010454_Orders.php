@@ -39,6 +39,10 @@ class Orders extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 100,
             ],
+            'handledby' => [
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+            ],
 
         ]);
 

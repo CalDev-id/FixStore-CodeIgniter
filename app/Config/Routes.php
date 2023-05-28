@@ -32,11 +32,11 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/pesan', 'Home::pesan');
 $routes->get('/faq', 'Home::faq');
-$routes->get('/admin', 'Home::admin');
-$routes->get('/forms', 'Home::adminForm');
+// $routes->get('/admin', 'Home::admin');
+
 $routes->get('/login', 'Home::adminLogin');
 $routes->get('/profile', 'Home::adminProfile');
-$routes->get('/tables', 'Home::adminTables');
+
 
 $routes->get('/register', 'AuthController::register');
 $routes->post('/register', 'AuthController::processRegister');
@@ -51,6 +51,77 @@ $routes->post('/orders/store', 'Orders::store');
 $routes->get('/orders/edit/(:num)', 'Orders::edit/$1');
 $routes->post('/orders/update', 'Orders::update');
 $routes->get('/orders/delete/(:num)', 'Orders::delete/$1');
+
+$routes->get('/pembelian', 'Pembelian::index');
+
+// Rute untuk menampilkan form tambah produk
+$routes->get('/createPembelian', 'Pembelian::create');
+
+// Rute untuk menyimpan produk baru
+$routes->post('/createPembelian', 'Pembelian::store');
+
+// Rute untuk menampilkan form edit produk
+$routes->get('/Pembelian/edit/(:num)', 'Pembelian::edit/$1');
+
+// Rute untuk mengupdate produk
+$routes->post('/Pembelian/update', 'Pembelian::update');
+
+// Rute untuk menghapus produk
+$routes->get('/Pembelian/delete/(:num)', 'Pembelian::delete/$1');
+
+
+
+
+
+
+$routes->get('/product', 'Product::index');
+
+
+// // Rute untuk menampilkan daftar produk
+// $routes->get('products', 'ProductController::index');
+
+// Rute untuk menampilkan form tambah produk
+$routes->get('/createProduct', 'Product::create');
+
+// Rute untuk menyimpan produk baru
+$routes->post('/createProduct', 'Product::store');
+
+// Rute untuk menampilkan form edit produk
+$routes->get('/product/edit/(:num)', 'Product::edit/$1');
+
+// Rute untuk mengupdate produk
+$routes->post('/product/update', 'Product::update');
+
+// Rute untuk menghapus produk
+$routes->get('/product/delete/(:num)', 'Product::delete/$1');
+
+
+
+
+$routes->get('/pegawai', 'Pegawai::index');
+
+
+// // Rute untuk menampilkan daftar produk
+// $routes->get('products', 'ProductController::index');
+
+// Rute untuk menampilkan form tambah produk
+$routes->get('/createPegawai', 'Pegawai::create');
+
+// Rute untuk menyimpan produk baru
+$routes->post('/createPegawai', 'Pegawai::store');
+
+// Rute untuk menampilkan form edit produk
+$routes->get('/pegawai/edit/(:num)', 'Pegawai::edit/$1');
+
+// Rute untuk mengupdate produk
+$routes->post('/pegawai/update', 'Pegawai::update');
+
+// Rute untuk menghapus produk
+$routes->get('/pegawai/delete/(:num)', 'Pegawai::delete/$1');
+
+
+
+$routes->get('/report', 'Pembelian::indexReport');
 
 /*
  * --------------------------------------------------------------------

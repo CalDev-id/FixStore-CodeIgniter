@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\OrderModel;
+use App\Models\PegawaiModel;
+use App\Models\PembelianModel;
+use App\Models\ProductModel;
 
 class Orders extends BaseController
 {
@@ -11,8 +14,19 @@ class Orders extends BaseController
     {
         $model = new OrderModel();
         $data['orders'] = $model->findAll();
+        $pegawai = new PegawaiModel();
+        $product = new PembelianModel();
 
-        return view('read', $data);
+        $data['client'] = $model->countAllResults();
+
+        return view('admin', [
+            'pegawai' => $pegawai->findAll(),
+            'orders' => $model->findAll(),
+            'client' => $model->countAllResults(),
+            'sales' => $product->selectSum('price')->get()->getRow(),
+            'product' => $product->countAllResults(),
+        ]);
+        
     }
 
     public function create()
@@ -29,10 +43,18 @@ class Orders extends BaseController
             'car_name' => $this->request->getVar('car_name'),
             'address' => $this->request->getVar('address'),
             'damage_details' => $this->request->getVar('damage_details'),
-            'car_image' => $this->request->getVar('car_image'),
             'car_type' => $this->request->getVar('car_type'),
-            
         ];
+        $imageFile = $this->request->getFile('car_image');
+        $newName = $imageFile->getRandomName();
+        $imageFile->move('image/orders', $newName);
+        $data['car_image'] = 'image/orders/' . $newName;
+
+        // if ($imageFile && $imageFile->isValid()) {
+        //     $newName = $imageFile->getRandomName();
+        //     $imageFile->move('image/products', $newName);
+        //     $post['car_image'] = 'image/products/' . $newName;
+        // }
 
         $model->insert($data);
 
@@ -43,8 +65,12 @@ class Orders extends BaseController
     {
         $model = new OrderModel();
         $data['order'] = $model->find($id);
+        $pegawai = new PegawaiModel();
 
-        return view('edit', $data);
+        return view('edit', [
+            'pegawai' => $pegawai->findAll(),
+            'order' => $model->find($id)
+        ]);
     }
 
     public function update()
@@ -55,8 +81,11 @@ class Orders extends BaseController
 
         $data = [
             'customer_name' => $this->request->getVar('customer_name'),
-            'product_name' => $this->request->getVar('product_name'),
-            'quantity' => $this->request->getVar('quantity')
+            'car_name' => $this->request->getVar('car_name'),
+            'address' => $this->request->getVar('address'),
+            'damage_details' => $this->request->getVar('damage_details'),
+            'car_type' => $this->request->getVar('car_type'),
+            'handleby' => $this->request->getVar('handleby'),
         ];
 
         $model->update($id, $data);

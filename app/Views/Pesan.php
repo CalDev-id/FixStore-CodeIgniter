@@ -63,7 +63,8 @@
         </div>
     </header>
 
-    <form action="/orders/store" method="POST">
+    <form action="/orders/store" method="POST" enctype="multipart/form-data">
+        <?= csrf_field(); ?>
         <section class="container mt-10">
             <div class="text-center mb-10">
                 <h1 class="text-2xl font-semibold">Call a Mechanic Service</h1>
@@ -137,6 +138,8 @@
                 </div>
             </div>
 
+
+
             <div>
                 <button class="w-24 float-right py-3 px-5 rounded-lg bg-slate-800 text-white font-medium text-base transition hover:bg-primary-hover active:bg-primary-active disabled:cursor-default disabled:bg-[#F5F7FD]" type="submit" value="Simpan">
                     Submit
@@ -144,7 +147,9 @@
             </div>
 
         </section>
+
     </form>
+
 
 
 
