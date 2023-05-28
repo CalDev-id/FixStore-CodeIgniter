@@ -70,7 +70,11 @@ class Pembelian extends BaseController
         $model = new PembelianModel();
         $data['order'] = $model->find($id);
 
-        return view('editPembelian', $data);
+        return view('editPembelian', [
+            'order' => $model->find($id),
+            'product' => $model->findAll(),
+        
+        ]);
     }
 
     public function update()
